@@ -27,8 +27,7 @@ const App = () => {
       // Upload the file to s3 with private access level. 
       await Storage.put('picture.jpg', file, {
         level: 'private',
-        contentType: 'image/jpg',
-	metadata: {foo: "bar"}
+        contentType: 'image/jpg'
       });
       // Retrieve the uploaded file to display
       //const url = await Storage.get('picture.jpg', { level: 'private' })
